@@ -1,20 +1,24 @@
 import java.util.*;
-public class palindrome{
-	public static void main(String[] ar){
-		Scanner sc=new Scanner(System.in);
-		String st=sc.nextLine();
-		int l=(st.length())-1;
-		char c[]=st.toCharArray();
-		int f=0;
-		for(int i=0;i<st.length()/2;i++){
+public class palin{
+	public static boolean checkPalin(String str)
+	{
+		int l = str.length()-1;
+		char c[]= str.toCharArray();
+		int flag=0;
+		for(int i = 0;i < str.length()/2;i++){
 			if(c[i]!=c[l--]){
-				f=1;
+				flag = 1;
 				break;
 			}
 		}
-		if(f==0)
-			System.out.println("palindrome");
-		else
-			System.out.println("not palindrome");
+		if(flag == 0) return true;
+		else  return false;
+	}
+	public static void main(String[] ar){
+		Scanner s = new Scanner(System.in);
+		String str = s.nextLine();
+		boolean b = checkPalin(str);
+		System.out.println(b+"");
+		
 	}
 }
