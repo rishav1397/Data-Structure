@@ -1,18 +1,18 @@
-import java.util.*;
+import java.util.Scanner;
 class subseq{
      static Scanner sc=new Scanner(System.in);
-     static void seq(String str,String st){
-      if(st.length()<0)
+     static void seq(String str,String str2){
+      if(str2.length()<0)
       return;
 
       System.out.println(str);
-      for(int i=0;i<st.length();i++)
-       seq(str+st.charAt(i),st.substring(i+1,st.length()));
+      for(int i=0;i<str2.length();i++)
+       seq(str+str2.charAt(i),str2.substring(i+1,str2.length()));
   }
 
 
        public static void main (String args[]){
-        String str=sc.nextLine();
-          seq("",str);
+        String st=sc.nextLine();
+          seq("",st);
           }
         }
