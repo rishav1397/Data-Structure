@@ -1,5 +1,5 @@
 import java.util.*;
-public class frequency{
+public class freq{
   public static char highestFreq(String str)
   {
     char c[]=str.toCharArray();
@@ -21,7 +21,7 @@ public class frequency{
 	public static void main(String[] ar){
 		Scanner s=new Scanner(System.in);
 		String str=s.nextLine();
-    char high = highestFreq(str);
-    System.out.println("Highest frequency is of "+high);
+    char h = highestFreq(str);
+    System.out.println("Highest frequency is of "+h);
 	}
 }
